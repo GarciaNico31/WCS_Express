@@ -1,0 +1,19 @@
+------------------------ EXPRESS 00 ------------------------
+
+Node.JS sert essentiellement à la création d'aplications serveur
+
+Quelques exemples d'application serveur :
+
+Les API, qu'on a utilisée sous React ou Angular. On peux crée avec notre une API
+Des systèmes de gestion de contenu (CMS pour Content Management System). Le langage dominant en la matière est PHP, avec des CMS comme WordPress ou MediaWiki (utilisé par Wikipédia). Mais des alternatives basées sur Node existent : Ghost (plate-forme de blog), Wiki.js
+Des plate-formes de streaming
+
+Une apllciation serveur à besoin de fichiers ou d'une base de données
+
+Ils existent des briques-logiciels, il y en native avec node.js d'autre que l'on devra installer via NPM
+
+Dans Node, on trouve le module http qui permets de crée des sites web basique.
+
+un serveur doit fonctionner de façon permanente
+
+Les serveurs WEB ou HTTP répondent à des requetes issue d'un client (navigateur) et lui renvoi du contenu : HTML(pages web) ou JSON(données d'API)
