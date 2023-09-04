@@ -17,3 +17,49 @@ Dans Node, on trouve le module http qui permets de crée des sites web basique.
 un serveur doit fonctionner de façon permanente
 
 Les serveurs WEB ou HTTP répondent à des requetes issue d'un client (navigateur) et lui renvoi du contenu : HTML(pages web) ou JSON(données d'API)
+
+------------------------ EXPRESS 01 ------------------------
+
+Créer un serveur http peux devenir compliqué c'est pour ça qu'on utilise le framework express.
+
+Nodemon pemets d'écouter les changements dans les fichiers et rédemarre le serveur automatiquement
+
+
+La commande  > npm install nodemon --save-dev < nous permets d'installer nodemon dans les dépendance de developpement pour ne pas l'utilsé en production
+
+
+La définition des routes devrait ressembler à ceci :
+    app.METHOD(PATH, HANDLER)
+
+    app est une instance d'Express.
+    METHOD est une méthode de requête HTTP. (GET, POST, PUT, DELETE)
+    PATH est un chemin sur le serveur.
+    HANDLER est la fonction exécutée lorsque le chemin est reconnu
+
+Quelques méthodes de Response :
+
+    - res.send : envoi de données (String, Object, Array, Buffer)
+            (req, res) => {
+            res.send(‘Validated’);
+            };
+    - res.status : envoi statut comme réponse (200, 404, etc ...)
+            (req, res) => {
+            res.status(404).send(‘Cannot find /foo’);
+            };
+    - res.sendStatus : envoi UNIQUEMENT que le statut de la requete
+            (req, res) => {
+            res.sendStatus(200);
+            };
+    - res.json : envoi l'objet en format JSON
+            (req, res) => {
+            res.json({ result: ‘10 items found’ });
+            };
+    - res.end : termine la requete sans envoyer de données particulières
+            (req, res) => {
+            res.end(); // or res.status(404).end();
+            };
+
+             ______________________
+            | CHALLENGE EXPRESS 01 |
+            |______________________|
+            
